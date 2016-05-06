@@ -1,0 +1,24 @@
+name: HorizonJumper 
+version: 0.1 
+author: CaptainMcClellan
+main: com.somethinghub.HorizonJumper.HorizonJumperPlugin 
+description: Warp by going beyond the top Y level or falling below the world.
+softdepend: [PermissionsEx] 
+#Commands
+commands:
+  horizonjumper:
+    description: Lists all HeroChat commands
+    usage: Type "/hj or /HorizonJumper to reload all config"
+    aliases: hj
+    permission: HorizonJumper.reload
+
+#Permission
+permissions:
+   HorizonJumper.*:
+     description: Root permission for Horizon Jumper
+     children:
+       HorizonJumper.reload: true
+
+   HorizonJumper.reload:
+     description: Permission to reload Horizon Jumper config
+     default: op
